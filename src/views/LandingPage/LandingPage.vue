@@ -69,17 +69,19 @@ export default {
 }
 .logo {
   position: absolute;
+  color: white;
   top: 0;
   left: 0;
   width: 100%;
   text-align: center;
   padding-top: 50px;
-  font-weight: bold;
+  text-decoration-line: underline;
   font-size: 2rem;
 }
 .img {
   background-size: cover;
-  background-image: url("../../assets/image1.jpeg");
+  background-image: linear-gradient(#11111187, #1111116b),
+    url("../../assets/image1.jpeg");
 }
 ::v-deep .v-toolbar__content,
 .v-toolbar__extension {
