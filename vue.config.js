@@ -2,5 +2,5 @@ module.exports = {
   transpileDependencies: ["vuetify"],
 };
 module.exports = {
-  publicPath: "/ulavu/",
+  publicPath: "/ulavukkadai1/",
 };
