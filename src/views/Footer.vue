@@ -1,7 +1,7 @@
 <template>
   <div class="footer">
     <p>அஸ்வின் கிறிஸ்டோ / Aswin Christo</p>
-    <p>தொடர்புக்கு: azooschristo@gmail.com</p>
+    <p style="font-style: italic">தொடர்புக்கு : azooschristo@gmail.com</p>
   </div>
 </template>
 
