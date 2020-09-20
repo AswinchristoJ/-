@@ -8,7 +8,7 @@ Vue.use(VueRouter);
 const routes = [
   {
     path: "*",
-    name: "உள்நுழைவு பக்கம்",
+    name: "வழுவுதல்",
     component: LandingPage,
   },
   // {

@@ -14,7 +14,7 @@
               @click="login=true"
             >
               உள்நுழைய
-              <span v-if="!login" style="font-size:0.7rem">(இங்கு அழுத்தவும்)</span>
+              <span class="subTitle" v-if="!login">(இங்கு அழுத்தவும்)</span>
             </v-flex>
             <v-flex
               d-flex
@@ -25,12 +25,11 @@
               @click="login=false"
             >
               பதிவுசெய்ய
-              <span v-if="login" style="font-size:0.7rem">(இங்கு அழுத்தவும்)</span>
+              <span class="subTitle" v-if="login">(இங்கு அழுத்தவும்)</span>
             </v-flex>
           </v-toolbar>
           <v-card-text>
-            <Login class="content" v-if="login" />
-            <SignIn class="content" v-else />
+            <Login class="content" :login="login" />
           </v-card-text>
         </v-card>
       </v-col>
@@ -41,11 +40,9 @@
 <script>
 // need to add transition for the dynamic components
 import Login from "./Login";
-import SignIn from "./SignIn";
 export default {
   components: {
-    Login,
-    SignIn
+    Login
   },
   data() {
     return {
@@ -60,12 +57,16 @@ export default {
   font-size: 1rem !important;
   line-height: normal;
   flex-direction: column;
+  background-color: #4caf50;
   cursor: pointer;
   &-disabled {
     background-color: gray;
     box-shadow: 0px 3px 1px -2px rgba(0, 0, 0, 0.2),
       0px 2px 2px 0px rgba(0, 0, 0, 0.14), 0px 1px 5px 0px rgba(0, 0, 0, 0.12);
   }
+}
+.subTitle {
+  font-size: 0.7rem;
 }
 .logo {
   position: absolute;
