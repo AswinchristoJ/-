@@ -1,7 +1,7 @@
 <!-- அடிக்குறிப்பு -->
 <template>
   <div>
-    <v-main transition="slide-x-transition">
+    <v-main style="height:100vh" transition="slide-x-transition">
       <router-view></router-view>
     </v-main>
     <Footer />

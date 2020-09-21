@@ -11,7 +11,6 @@
       ></v-text-field>
       <v-text-field
         v-model="password"
-        :counter="10"
         :rules="passwordRules"
         label="கடவுச்சொல்"
         prepend-icon="mdi-lock"
@@ -22,7 +21,6 @@
       <v-text-field
         v-if="!login"
         v-model="newPassword"
-        :counter="10"
         :rules="newPasswordRules"
         label="மறுமுறை கடவுச்சொல் உள்ளிடவும்"
         prepend-icon="mdi-lock"
@@ -38,16 +36,26 @@
           label="நான் ஒரு வியாபாரி"
           required
         ></v-checkbox>
-        <div v-else class="info-div px-2">
-          ( இப்பக்கம் பொது பயனாளிகள் பதிவிற்கு மட்டும்,
-          வியாபாரியாக பதிவு செய்ய எங்களை தொடர்பு கொள்ளவும். )
-        </div>
+        <v-tooltip v-else right>
+          <template v-slot:activator="{ on, attrs }">
+            <v-icon
+              style="margin-left:50px"
+              v-bind="attrs"
+              v-on="on"
+              color="info"
+            >mdi-alert-circle-outline</v-icon>
+          </template>
+          <span>
+            இப்பக்கம் பொது பயனாளிகள் பதிவிற்கு மட்டும்,
+            வியாபாரியாக பதிவு செய்ய எங்களை தொடர்பு கொள்ளவும்.
+          </span>
+        </v-tooltip>
         <v-btn
           :disabled="!valid"
-          class="login-button mr-4"
+          class="login-button"
           color="success"
           type="submit"
-          @click.stop="login?loginHandler:signinHandler"
+          @click.prevent="login?loginHandler:signinHandler"
         >
           {{login?'உள்நுழைக':'பதிவுசெய்க'}}
           <v-icon small>mdi-arrow-right</v-icon>
@@ -111,20 +119,22 @@ export default {
 .theme--light.v-input textarea {
   font-size: 0.9rem;
 }
+::v-deep.v-input .v-label {
+  font-size: 0.85rem;
+}
 .form-footer {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+  position: relative;
 }
 .login-button {
   border-radius: 0px;
   font-size: 0.75rem;
   margin-right: 0px !important;
 }
-.info-div {
-  font-size: 0.7rem;
-  text-align: center;
-  color: black;
+::v-deep.v-tooltip__content {
+  width: 180px;
 }
 </style>

@@ -1,39 +1,30 @@
 <template>
   <v-app id="inspire">
-    <v-row class="img" align="center" justify="center">
-      <v-col cols="12" sm="8" md="4">
-        <div class="logo">உழவுக்கடை</div>
-        <v-card>
-          <v-toolbar color="primary" dark flat>
-            <v-flex
-              d-flex
-              align-center
-              justify-center
-              class="title"
-              :class="!login?'title-disabled':''"
-              @click="login=true"
-            >
-              உள்நுழைய
-              <span class="subTitle" v-if="!login">(இங்கு அழுத்தவும்)</span>
-            </v-flex>
-            <v-flex
-              d-flex
-              align-center
-              justify-center
-              class="title"
-              :class="login?'title-disabled':''"
-              @click="login=false"
-            >
-              பதிவுசெய்ய
-              <span class="subTitle" v-if="login">(இங்கு அழுத்தவும்)</span>
-            </v-flex>
-          </v-toolbar>
-          <v-card-text>
-            <Login class="content" :login="login" />
-          </v-card-text>
-        </v-card>
-      </v-col>
-    </v-row>
+    <div class="img">
+      <div class="logo">உழவுக்கடை</div>
+      <v-card class="loginCard">
+        <v-toolbar color="primary" dark flat>
+          <v-flex class="title" :class="!login?'title-disabled':''" @click="login=true">
+            உள்நுழைய
+            <span class="subTitle" v-if="!login">(இங்கு அழுத்தவும்)</span>
+          </v-flex>
+          <v-flex
+            d-flex
+            align-center
+            justify-center
+            class="title"
+            :class="login?'title-disabled':''"
+            @click="login=false"
+          >
+            பதிவுசெய்ய
+            <span class="subTitle" v-if="login">(இங்கு அழுத்தவும்)</span>
+          </v-flex>
+        </v-toolbar>
+        <v-card-text>
+          <Login class="content" :login="login" />
+        </v-card-text>
+      </v-card>
+    </div>
   </v-app>
 </template>
 
@@ -54,6 +45,9 @@ export default {
 <style lang="scss" scoped>
 .title {
   height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   font-size: 1rem !important;
   line-height: normal;
   flex-direction: column;
@@ -79,10 +73,18 @@ export default {
   text-decoration-line: underline;
   font-size: 2rem;
 }
+.loginCard {
+  width: 500px;
+  height: auto;
+}
 .img {
   background-size: cover;
   background-image: linear-gradient(#11111187, #1111116b),
     url("../../assets/image1.jpeg");
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 ::v-deep .v-toolbar__content,
 .v-toolbar__extension {
