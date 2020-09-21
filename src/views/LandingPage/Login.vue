@@ -15,7 +15,7 @@
         label="கடவுச்சொல்"
         prepend-icon="mdi-lock"
         type="password"
-        autocomplete="current-password"
+        :autocomplete="login?'current-password':'new-password'"
         required
       ></v-text-field>
       <v-text-field
@@ -25,7 +25,6 @@
         label="மறுமுறை கடவுச்சொல் உள்ளிடவும்"
         prepend-icon="mdi-lock"
         type="password"
-        autocomplete="new-password"
         required
       ></v-text-field>
       <div class="form-footer">
