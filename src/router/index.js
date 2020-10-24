@@ -37,4 +37,16 @@ const router = new VueRouter({
   routes,
 });
 
+router.beforeEach((to, from, next) => {
+  if (to.path === "/login") {
+    localStorage.clear();
+    next();
+    return;
+  }
+  const id = localStorage.getItem("ULAVUKKADAI_ID");
+  const password = localStorage.getItem("ULAVUKKADAI_PASS");
+  if (id && password) next();
+  else next({ path: "login" });
+});
+
 export default router;

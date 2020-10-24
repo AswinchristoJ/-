@@ -104,7 +104,13 @@ export default {
   },
   methods: {
     loginHandler() {
-      if (this.login) this.$router.push({ path: "about" });
+      if (!this.login) return;
+      try {
+        localStorage.setItem("ULAVUKKADAI_ID", this.email);
+        localStorage.setItem("ULAVUKKADAI_PASS", this.password);
+      } finally {
+        this.$router.push({ path: "about" });
+      }
     }
   }
 };

@@ -36,7 +36,7 @@
           </v-list-item-content>
         </v-list-item>
       </v-list>
-      <v-btn class="pa-5 mb-5 ml-5" slot="append" @click="$router.push({path:'login'})">வெளியேறு</v-btn>
+      <v-btn class="pa-5 mb-5 ml-5" slot="append" @click="$router.push({ path: 'login' })">வெளியேறு</v-btn>
     </v-navigation-drawer>
 
     <v-main transition="slide-x-transition">
@@ -65,9 +65,6 @@ export default {
       background: true,
       miniVariant: false
     };
-  },
-  mounted() {
-    console.log(this.$router);
   }
 };
 </script>
