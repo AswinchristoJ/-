@@ -1,31 +1,29 @@
 <template>
-  <v-app id="inspire">
-    <div class="img">
-      <div class="logo">உழவுக்கடை</div>
-      <v-card class="loginCard">
-        <v-toolbar color="primary" dark flat>
-          <v-flex class="title" :class="!login?'title-disabled':''" @click="login=true">
-            உள்நுழைய
-            <span class="subTitle" v-if="!login">(இங்கு அழுத்தவும்)</span>
-          </v-flex>
-          <v-flex
-            d-flex
-            align-center
-            justify-center
-            class="title"
-            :class="login?'title-disabled':''"
-            @click="login=false"
-          >
-            பதிவுசெய்ய
-            <span class="subTitle" v-if="login">(இங்கு அழுத்தவும்)</span>
-          </v-flex>
-        </v-toolbar>
-        <v-card-text>
-          <Login class="content" :login="login" />
-        </v-card-text>
-      </v-card>
-    </div>
-  </v-app>
+  <div class="img">
+    <div class="logo">உழவுக்கடை</div>
+    <v-card class="loginCard mx-2">
+      <v-toolbar color="primary" dark flat>
+        <v-flex class="title" :class="!login?'title-disabled':''" @click="login=true">
+          உள்நுழைய
+          <span class="subTitle" v-if="!login">(இங்கு அழுத்தவும்)</span>
+        </v-flex>
+        <v-flex
+          d-flex
+          align-center
+          justify-center
+          class="title"
+          :class="login?'title-disabled':''"
+          @click="login=false"
+        >
+          பதிவுசெய்ய
+          <span class="subTitle" v-if="login">(இங்கு அழுத்தவும்)</span>
+        </v-flex>
+      </v-toolbar>
+      <v-card-text>
+        <Login class="content" :login="login" />
+      </v-card-text>
+    </v-card>
+  </div>
 </template>
 
 <script>

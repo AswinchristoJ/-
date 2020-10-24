@@ -1,8 +1,9 @@
+<!-- அடிக்குறிப்பு -->
 <template>
-  <div class="footer">
-    <p>அஸ்வின் கிறிஸ்டோ / Aswin Christo</p>
-    <p style="font-style: italic">தொடர்புக்கு : azooschristo@gmail.com</p>
-  </div>
+  <v-footer class="footer pa-5" color="#0000006b" dark absolute>
+    <div>அஸ்வின் கிறிஸ்டோ / Aswin Christo</div>
+    <div>தொடர்புக்கு : azooschristo@gmail.com</div>
+  </v-footer>
 </template>
 
 <script>
@@ -13,15 +14,10 @@ export default {
 
 <style lang="scss" scoped>
 .footer {
-  position: sticky;
-  bottom: 0;
-  width: 100%;
-  height: 80px;
-  background: #0000007d;
-  color: white;
-  text-align: right;
-  padding: 15px;
-  line-height: 1.6;
-  font-size: 0.8rem;
+  font-size: 0.7rem;
+  color: #ffffffba !important;
+  text-align: right !important;
+  display: block;
+  z-index: 0;
 }
 </style>
