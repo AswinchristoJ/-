@@ -11,7 +11,9 @@
       ></v-text-field>
       <v-text-field
         v-model="password"
+        class="pt-1"
         :rules="passwordRules"
+        single-line
         label="கடவுச்சொல்"
         prepend-icon="mdi-lock"
         type="password"
@@ -21,7 +23,9 @@
       <v-text-field
         v-if="!login"
         v-model="newPassword"
+        class="pt-1"
         :rules="newPasswordRules"
+        single-line
         label="மறுமுறை கடவுச்சொல் உள்ளிடவும்"
         prepend-icon="mdi-lock"
         type="password"
@@ -54,7 +58,7 @@
           class="login-button"
           color="success"
           type="submit"
-          @click.prevent="login?loginHandler:signinHandler"
+          @click="loginHandler"
         >
           {{login?'உள்நுழைக':'பதிவுசெய்க'}}
           <v-icon small>mdi-arrow-right</v-icon>
@@ -100,10 +104,7 @@ export default {
   },
   methods: {
     loginHandler() {
-      //
-    },
-    signinHandler() {
-      //
+      if (this.login) this.$router.push({ path: "about" });
     }
   }
 };
@@ -113,6 +114,11 @@ export default {
 ::v-deep.v-input--selection-controls .v-input__slot > .v-label,
 .v-input--selection-controls .v-radio > .v-label {
   font-size: 0.9rem;
+}
+::v-deep.v-input {
+  .v-messages__message {
+    font-size: 0.6rem !important;
+  }
 }
 ::v-deep.theme--light.v-input input,
 .theme--light.v-input textarea {

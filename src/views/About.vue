@@ -1,5 +1,5 @@
 <template>
   <div class="about">
-    <h1>This is an about page</h1>
+    <h4>இச்செயலியை பற்றிய விளக்கப்பக்கம்.</h4>
   </div>
 </template>

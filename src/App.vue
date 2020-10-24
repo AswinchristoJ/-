@@ -1,18 +1,17 @@
-<!-- அடிக்குறிப்பு -->
 <template>
-  <div>
-    <v-main style="height:100vh" transition="slide-x-transition">
-      <router-view></router-view>
-    </v-main>
+  <v-app id="inspire">
+    <AppView />
     <Footer />
-  </div>
+  </v-app>
 </template>
 
 <script>
 import Footer from "./views/Footer";
+import AppView from "./views/AppView";
 export default {
   components: {
-    Footer
+    Footer,
+    AppView
   }
 };
 </script>
