@@ -1,6 +1,9 @@
 <template>
   <div class="img">
-    <div class="logo">உழவுக்கடை</div>
+    <div class="logo">
+      உழவுக்கடை
+      <div class="sub-logo">[ விவசாய பொருட்களுக்கான இணைய சந்தை ]</div>
+    </div>
     <v-card class="loginCard mx-2">
       <v-toolbar color="primary" dark flat>
         <v-flex class="title" :class="!login?'title-disabled':''" @click="login=true">
@@ -68,8 +71,10 @@ export default {
   width: 100%;
   text-align: center;
   padding-top: 50px;
-  text-decoration-line: underline;
   font-size: 2rem;
+}
+.sub-logo {
+  font-size: 0.8rem;
 }
 .loginCard {
   width: 500px;
