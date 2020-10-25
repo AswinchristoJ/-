@@ -1,5 +1,5 @@
 <template>
-  <v-app id="inspire">
+  <v-app style="background:rgb(128 128 128 / 37%)" id="inspire">
     <AppView />
     <Footer />
   </v-app>

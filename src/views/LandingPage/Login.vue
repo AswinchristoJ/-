@@ -105,12 +105,11 @@ export default {
   methods: {
     loginHandler() {
       if (!this.login) return;
-      try {
-        localStorage.setItem("ULAVUKKADAI_ID", this.email);
-        localStorage.setItem("ULAVUKKADAI_PASS", this.password);
-      } finally {
+      localStorage.setItem("ULAVUKKADAI_ID", this.email);
+      localStorage.setItem("ULAVUKKADAI_PASS", this.password);
+      setTimeout(() => {
         this.$router.push({ path: "about" });
-      }
+      }, 1000);
     }
   }
 };
