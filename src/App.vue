@@ -1,16 +1,14 @@
 <template>
-  <v-app style="background:rgb(128 128 128 / 37%)" id="inspire">
+  <v-app style="background:rgb(128 128 128 / 14%)" id="inspire">
     <AppView />
-    <Footer />
+    <!-- <Footer /> -->
   </v-app>
 </template>
 
 <script>
-import Footer from "./views/Footer";
-import AppView from "./views/AppView";
+import AppView from "./Layout/AppView";
 export default {
   components: {
-    Footer,
     AppView
   }
 };
