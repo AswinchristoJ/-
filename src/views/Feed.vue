@@ -2,9 +2,10 @@
   <div>
     <WelcomeBanner />
     <v-card>
+      <v-card-subtitle class="font-weight-bold">{{tiles[feedItem].title}} :</v-card-subtitle>
       <v-container fluid>
-        <v-row :class="screenWidth > 500 ? 'mx-5' : ''" dense>
-          <v-col v-for="(card, i) in cards" :key="i" :cols="screenWidth < 500 ? 6 : 4">
+        <v-row style="padding-bottom:40px" :class="screenWidth > 500 ? 'mx-5' : ''" dense>
+          <v-col v-for="(card, i) in cards[feedItem]" :key="i" :cols="screenWidth < 500 ? 6 : 4">
             <v-card>
               <v-img
                 :src="card.src"
@@ -40,14 +41,16 @@
       </template>
       <v-list>
         <v-subheader>தேர்வு செய்க :</v-subheader>
-        <v-list-item v-for="tile in tiles" :key="tile.title" @click="sheet = false">
-          <v-list-item-avatar>
-            <v-avatar size="32px" tile>
-              <img :src="tile.img" :alt="tile.title" />
-            </v-avatar>
-          </v-list-item-avatar>
-          <v-list-item-title>{{ tile.title }}</v-list-item-title>
-        </v-list-item>
+        <v-list-item-group v-model="feedItem" color="#624caf">
+          <v-list-item v-for="tile in tiles" :key="tile.title" @click="sheet = false">
+            <v-list-item-avatar>
+              <v-avatar size="32px" tile>
+                <img :src="tile.img" :alt="tile.title" />
+              </v-avatar>
+            </v-list-item-avatar>
+            <v-list-item-title>{{ tile.title }}</v-list-item-title>
+          </v-list-item>
+        </v-list-item-group>
       </v-list>
     </v-bottom-sheet>
   </div>
@@ -55,7 +58,13 @@
 
 <script>
 import WelcomeBanner from "./Feed/WelcomeBanner";
-import { cards } from "./Feed/data.js";
+import {
+  vegetables,
+  pulses,
+  masalas,
+  fruits,
+  otherProducts
+} from "./Feed/data.js";
 
 export default {
   name: "Feed",
@@ -64,13 +73,14 @@ export default {
   },
   data() {
     return {
-      cards,
+      feedItem: 0,
+      cards: [vegetables, pulses, masalas, fruits, otherProducts],
       sheet: false,
       tiles: [
         {
           img:
             "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.motosha.com%2Fwp-content%2Fuploads%2Ffresh-carrots-from-the-market-12-05-1024x683.jpg&f=1&nofb=1",
-          title: "காய்கறி"
+          title: "காய்கறிகள்"
         },
         {
           img:
