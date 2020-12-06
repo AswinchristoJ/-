@@ -3,6 +3,7 @@
     :value="toggleDrawer"
     mobile-breakpoint="400"
     absolute
+    style="z-index:5"
     app
     color="#624caf"
     dark
