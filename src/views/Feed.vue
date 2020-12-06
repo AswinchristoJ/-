@@ -31,7 +31,7 @@
 
     <v-bottom-sheet v-model="sheet" inset>
       <template v-slot:activator="{ on, attrs }">
-        <v-bottom-navigation color="pink" value="types" fixed>
+        <v-bottom-navigation class="align-center" color="pink" value="types" fixed>
           <v-btn value="types" v-bind="attrs" v-on="on">
             <span class="font-weight-bold">மற்ற பொருட்கள்</span>
             <v-icon>mdi-format-list-bulleted-type</v-icon>
