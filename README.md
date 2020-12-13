@@ -1,6 +1,6 @@
 # இணையதள மளிகைக்கடை:
 
-https://aswinchristoj.github.io/ulavukkadai/#/
+https://aswinchristoj.github.io/Maligaikkadai/
 
 <h2>கைபேசி படத்திரை படங்கள்:</h2>
 <div>
