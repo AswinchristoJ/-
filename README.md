@@ -2,6 +2,22 @@
 
 https://aswinchristoj.github.io/ulavukkadai/#/
 
+<h2>கைபேசி படத்திரை படங்கள்:</h2>
+<div>
+<img src="https://github.com/AswinchristoJ/Maligaikkadai/blob/master/screenshots/Screenshot%20(126).png" width="200">
+<img width="30">
+<img src="https://github.com/AswinchristoJ/Maligaikkadai/blob/master/screenshots/Screenshot%20(128).png" width="200"> 
+<img width="30">
+<img src="https://github.com/AswinchristoJ/Maligaikkadai/blob/master/screenshots/Screenshot%20(129).png" width="200">  
+<img width="30">
+<img src="https://github.com/AswinchristoJ/Maligaikkadai/blob/master/screenshots/Screenshot%20(130).png" width="200">  
+</div>
+
+<h2>கணின படத்திரை படங்கள்:</h2>
+<img src="https://github.com/AswinchristoJ/Maligaikkadai/blob/master/screenshots/Screenshot%20(123).png" width="500">
+<img src="https://github.com/AswinchristoJ/Maligaikkadai/blob/master/screenshots/Screenshot%20(124).png" width="500">
+<img src="https://github.com/AswinchristoJ/Maligaikkadai/blob/master/screenshots/Screenshot%20(127).png" width="500">
+
 ## Project setup
 
 ```
