@@ -13,7 +13,7 @@ https://aswinchristoj.github.io/ulavukkadai/#/
 <img src="https://github.com/AswinchristoJ/Maligaikkadai/blob/master/screenshots/Screenshot%20(130).png" width="200">  
 </div>
 
-<h2>கணின படத்திரை படங்கள்:</h2>
+<h2>கணினி படத்திரை படங்கள்:</h2>
 <img src="https://github.com/AswinchristoJ/Maligaikkadai/blob/master/screenshots/Screenshot%20(123).png" width="500">
 <img src="https://github.com/AswinchristoJ/Maligaikkadai/blob/master/screenshots/Screenshot%20(124).png" width="500">
 <img src="https://github.com/AswinchristoJ/Maligaikkadai/blob/master/screenshots/Screenshot%20(127).png" width="500">
