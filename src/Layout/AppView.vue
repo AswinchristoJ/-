@@ -28,7 +28,7 @@ export default {
 
 <style lang="scss" scoped>
 .app-view {
-  margin: 15px 15px 0 15px;
+  margin: 0 15px 0 15px;
   height: 90vh;
   overflow-y: scroll;
 }

@@ -19,7 +19,10 @@
             <v-card-actions>
               <v-spacer></v-spacer>
               <v-btn icon>
-                <v-icon>mdi-cart-variant</v-icon>
+                <v-icon
+                  :color="card.selected ? 'primary' : ''"
+                  @click="addItem(card)"
+                >mdi-cart-variant</v-icon>
               </v-btn>
             </v-card-actions>
           </v-card>
@@ -30,7 +33,7 @@
 </template>
 
 <script>
-import { mapState } from "vuex";
+import { mapState, mapMutations } from "vuex";
 import {
   vegetables,
   pulses,
@@ -49,6 +52,14 @@ export default {
     ...mapState("feed", ["tiles", "feedItem"]),
     screenWidth() {
       return window.innerWidth;
+    }
+  },
+  methods: {
+    ...mapMutations("feed", ["addSelected", "removeSelected"]),
+    addItem(card) {
+      card.selected = !card.selected;
+      if (card.selected) this.addSelected(card);
+      else this.removeSelected(card);
     }
   }
 };

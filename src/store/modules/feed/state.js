@@ -1,5 +1,6 @@
 export default {
   feedItem: 0,
+  selected: [],
   tiles: [
     {
       img:
